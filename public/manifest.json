@@ -1,0 +1,39 @@
+{
+  "manifest_version": 2,
+
+  "name": "bookmarks-react",
+  "description": "A chrome extension for managing bookmarks.",
+  "version": "0.1.0",
+  "options_page": "public/app.html",
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+
+  "permissions": [
+  	"tabs",
+    "activeTab",
+  	"contextMenus",
+  	"downloads",  
+  	"storage",
+  	"bookmarks",
+  	"chrome://favicon/",
+    "\u003Call_urls\u003E",
+    "http://*/*",
+    "https://*/*",
+    "file:///*/*"
+  ],
+  
+  "background": {
+    "page": "public/background.html"
+  },
+  
+   "icons": {
+          "16": "public/icon.png",
+          "48": "public/icon.png",
+          "128": "public/icon.png"
+  },
+  
+  "browser_action": {
+    "default_icon": "public/public/icon.png",
+    "default_popup": "public/popup.html",
+    "default_title": "书签管理器"
+  }
+}
